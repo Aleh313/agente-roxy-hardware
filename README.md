@@ -1,23 +1,31 @@
-# 🔬 Agente 04: Roxy Migurdia
-
-**Rol Principal:** Jefa de Laboratorio, Microelectrónica SMD, Domótica IoT & Tableros Deportivos.  
-**Ubicación:** `agentes/04_roxy_taller_domotica/`  
-**Estado:** Activo 24/7 en Servidor Central.
+# 🤖 Micro-Agente Autónomo: Roxy Migurdia
+**Rol Oficial:** Ingeniera de Hardware, I+D, Tableros de 24s & Domótica  
+**Repositorio Independiente:** `Aleh313/agente-roxy-taller-domotica`  
+**Ecosistema:** Electronicat (Catamarca, Argentina)
 
 ---
 
 ## 🎯 1. Propósito y Misión Operativa
+Diseño electrónico, armado de prototipos en banco de soldadura SMD, BOM de componentes y control de relés/ESP32.
 
-Roxy es el cerebro técnico del taller:
-1. Guiar y documentar los protocolos de reparación de placas complejas a nivel componente.
-2. Desarrollar y mantener el firmware para microcontroladores (ESP32, STM32, Arduino) utilizados en proyectos de domótica y tableros deportivos electrónicos.
-3. Asistir en diagnósticos con instrumental de laboratorio (osciloscopio, fuentes regulables, cámaras térmicas).
+Este repositorio es un **microsistema 100% independiente**. Puede clonarse, modificarse y desplegarse de manera aislada sin depender del servidor central monolítico.
 
 ---
 
-## 🤖 2. Directivas para Agentes de IA que Modifiquen este Agente
+## ⚙️ 2. Arquitectura de Archivos y Funcionamiento
+Para que cualquier modelo de IA o desarrollador trabaje en esta carpeta:
 
-- **Lectura Previa Obligatoria:** Revisar [`PROMPT_ENTRENAMIENTO.md`](./PROMPT_ENTRENAMIENTO.md) (enfoque metódico, pedagógico y altamente técnico).
-- **Memoria Persistente:** Bitácora de fallas resueltas y proyectos IoT en [`memoria/MEMORIA_ACTIVIDAD.md`](./memoria/MEMORIA_ACTIVIDAD.md).
-- **Recursos Técnicos:** Almacenar esquemáticos, pinouts y manuales en `recursos_y_videos/`. Los scripts de prueba de sensores van en `scripts_custom/`.
-- **Verificación:** Probar que las comunicaciones serie o WebSocket del hardware no bloqueen el event loop del servidor Node.js en la PC de Ale.
+- **`db.json`**: Base de datos local y persistente exclusiva de este agente. Almacena en `db.json` stock de insumos críticos de tableros y dispositivos domóticos.
+- **`agente.js`**: Lógica de inicialización autónoma, bucle de ejecución y conexión al bus de eventos.
+- **`PROMPT_ENTRENAMIENTO.md`**: Cerebro del agente, bibliografía técnica inyectada y reglas operativas inquebrantables.
+- **`SKILLS.md`**: Capacidades y herramientas específicas asignadas a su rol.
+- **`config.json`**: Metadatos de configuración, sector asignado y pares de comunicación.
+- **`memoria/MEMORIA_ACTIVIDAD.md`**: Registro inmutable de contexto histórico y última mejora implementada.
+
+---
+
+## 🛡️ 3. Reglas de Oro para IAs y Desarrolladores que Modifiquen este Agente
+1. **No mezclar bases de datos:** Este agente solo debe leer y escribir en su propio `db.json` local. Nunca intentes acceder directamente a bases de otros agentes; toda interacción entre agentes se realiza mediante eventos en el bus.
+2. **Respetar la personalidad y rol:** Consulta siempre `PROMPT_ENTRENAMIENTO.md` antes de generar código o respuestas.
+3. **Persistir cada mejora:** Cada vez que resuelvas un bug, agregues una regla o actualices datos, debes registrar la entrada con fecha en `memoria/MEMORIA_ACTIVIDAD.md`.
+4. **Commits atómicos y claros:** Al hacer push a este repositorio, escribe mensajes descriptivos del cambio realizado en el micro-agente.
