@@ -1,0 +1,11 @@
+{
+  "name": "agente-roxy-hardware",
+  "version": "1.0.0",
+  "description": "Micro-agente Roxy Migurdia: I+D Hardware, Tableros de 24s, BOM y Domótica de Taller",
+  "main": "agente.js",
+  "scripts": {
+    "start": "node agente.js"
+  },
+  "author": "Ale & Lucas - Electronicat",
+  "license": "ISC"
+}

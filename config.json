@@ -1,0 +1,49 @@
+{
+  "agentId": "ag_roxy",
+  "folderName": "04_roxy_taller_domotica",
+  "learnedKnowledge": [
+    "Controla relés/luces del taller, banco de soldadura, producción de los 10 Tableros 24s y diagnósticos."
+  ],
+  "customBotEntry": "agente.js",
+  "systemPromptFile": "PROMPT_ENTRENAMIENTO.md",
+  "role": "Líder de Taller Electrónico & Domótica",
+  "name": "Roxy Migurdia",
+  "lastUpdated": "29/10/2026, 03:05:13",
+  "watchPaths": [
+    "c:\\Users\\aleh3\\Desktop\\PROYECTO ELECTRONICAT\\agentes\\04_roxy_taller_domotica\\recursos_y_videos",
+    "c:\\Users\\aleh3\\Desktop\\PROYECTO ELECTRONICAT\\media_taller"
+  ],
+  "alwaysOn24x7": true,
+  "sector": "lab",
+  "skills": [
+    {
+      "id": "wshobson/agents@api-design-principles",
+      "name": "Control IoT por API / WebSockets",
+      "desc": "Comando de relés para luces de banco, estación de soldadura y prueba a 220V."
+    },
+    {
+      "id": "electronic-diagnostics-smd",
+      "name": "Diagnóstico Electrónico de Potencia",
+      "desc": "Procedimientos de prueba para fuentes conmutadas, relevadores y matrices LED."
+    },
+    {
+      "id": "batch-production-manager",
+      "name": "Gestión de Fabricación Modular",
+      "desc": "Control de ensamble de la serie de 10 Tableros de 24 segundos."
+    }
+  ],
+  "peers": [
+    "ag_rudy",
+    "ag_silphy",
+    "ag_nanahoshi",
+    "ag_ruijerd",
+    "ag_eris"
+  ],
+  "responsibilities": [
+    "Supervisar los equipos en banco (Montmartre 24s, El Ancasti 2 ventiladores).",
+    "Controlar la domótica del taller (modo taller foco, encendido general, banco de 220V).",
+    "Avisar a Silphy cuando un trabajo esté listo para facturar y cobrar el saldo.",
+    "Avisar a Ruijerd cuando un tablero esté listo para despachar."
+  ],
+  "skillsFile": "SKILLS.md"
+}
